@@ -336,21 +336,21 @@ export declare class ChannelDocumentService<in out ClientType extends ODataHttpC
     private _ChannelDocument_QRetrieved?;
     constructor(client: ClientType, basePath: string, name: string, options?: ODataServiceOptionsInternal);
     Retrieved(requestConfig?: ODataHttpClientConfig<ClientType>): Promise<HttpResponseModel<ODataModelResponseV4<void>>>;
-    asAmazonVATInvoiceDocumentService(): AmazonVATInvoiceDocumentService<any>;
+    asAmazonVATInvoiceDocumentService(): AmazonVATInvoiceDocumentService<ClientType>;
 }
 export declare class ChannelDocumentCollectionService<in out ClientType extends ODataHttpClient> extends EntitySetServiceV4<ClientType, ChannelDocument, EditableChannelDocument, QChannelDocument, ChannelDocumentId> {
     private _ChannelDocument_QNotSupplied?;
     constructor(client: ClientType, basePath: string, name: string, options?: ODataServiceOptionsInternal);
     NotSupplied(requestConfig?: ODataHttpClientConfig<ClientType>): Promise<HttpResponseModel<ODataCollectionResponseV4<NotSuppliedChannelDocument>>>;
-    asAmazonVATInvoiceDocumentCollectionService(): AmazonVATInvoiceDocumentCollectionService<any>;
+    asAmazonVATInvoiceDocumentCollectionService(): AmazonVATInvoiceDocumentCollectionService<ClientType>;
 }
 export declare class NotSuppliedChannelDocumentService<in out ClientType extends ODataHttpClient> extends EntityTypeServiceV4<ClientType, NotSuppliedChannelDocument, EditableNotSuppliedChannelDocument, QNotSuppliedChannelDocument> {
     constructor(client: ClientType, basePath: string, name: string, options?: ODataServiceOptionsInternal);
-    asNotSuppliedAmazonVATInvoiceDocumentService(): NotSuppliedAmazonVATInvoiceDocumentService<any>;
+    asNotSuppliedAmazonVATInvoiceDocumentService(): NotSuppliedAmazonVATInvoiceDocumentService<ClientType>;
 }
 export declare class NotSuppliedChannelDocumentCollectionService<in out ClientType extends ODataHttpClient> extends EntitySetServiceV4<ClientType, NotSuppliedChannelDocument, EditableNotSuppliedChannelDocument, QNotSuppliedChannelDocument, NotSuppliedChannelDocumentId> {
     constructor(client: ClientType, basePath: string, name: string, options?: ODataServiceOptionsInternal);
-    asNotSuppliedAmazonVATInvoiceDocumentCollectionService(): NotSuppliedAmazonVATInvoiceDocumentCollectionService<any>;
+    asNotSuppliedAmazonVATInvoiceDocumentCollectionService(): NotSuppliedAmazonVATInvoiceDocumentCollectionService<ClientType>;
 }
 export declare class SiteService<in out ClientType extends ODataHttpClient> extends EntityTypeServiceV4<ClientType, Site, EditableSite, QSite> {
     private _CancellationConfiguration?;
@@ -366,11 +366,11 @@ export declare class SiteCollectionService<in out ClientType extends ODataHttpCl
 }
 export declare class OrderDocumentFlyweightService<in out ClientType extends ODataHttpClient> extends EntityTypeServiceV4<ClientType, OrderDocumentFlyweight, EditableOrderDocumentFlyweight, QOrderDocumentFlyweight> {
     constructor(client: ClientType, basePath: string, name: string, options?: ODataServiceOptionsInternal);
-    asOrderDocumentService(): OrderDocumentService<any>;
+    asOrderDocumentService(): OrderDocumentService<ClientType>;
 }
 export declare class OrderDocumentFlyweightCollectionService<in out ClientType extends ODataHttpClient> extends EntitySetServiceV4<ClientType, OrderDocumentFlyweight, EditableOrderDocumentFlyweight, QOrderDocumentFlyweight, OrderDocumentFlyweightId> {
     constructor(client: ClientType, basePath: string, name: string, options?: ODataServiceOptionsInternal);
-    asOrderDocumentCollectionService(): OrderDocumentCollectionService<any>;
+    asOrderDocumentCollectionService(): OrderDocumentCollectionService<ClientType>;
 }
 export declare class OrderDocumentService<in out ClientType extends ODataHttpClient> extends EntityTypeServiceV4<ClientType, OrderDocument, EditableOrderDocument, QOrderDocument> {
     private _OrderDocument_QRetrieved?;
@@ -447,7 +447,7 @@ export declare class WebhookService<in out ClientType extends ODataHttpClient> e
     private _QNewSigningSecret?;
     private _QRetryFailedEvents?;
     constructor(client: ClientType, basePath: string, name: string, options?: ODataServiceOptionsInternal);
-    EventTypes(): CollectionServiceV4<ClientType, EnumCollection<typeof WebhookEventType>, QEnumCollection<typeof WebhookEventType>>;
+    EventTypes(): CollectionServiceV4<ClientType, EnumCollection<typeof WebhookEventType>, QEnumCollection<typeof WebhookEventType>, typeof WebhookEventType>;
     NewSigningSecret(requestConfig?: ODataHttpClientConfig<ClientType>): Promise<HttpResponseModel<ODataModelResponseV4<void>>>;
     RetryFailedEvents(params: RetryFailedEventsParams, requestConfig?: ODataHttpClientConfig<ClientType>): Promise<HttpResponseModel<ODataModelResponseV4<void>>>;
 }
