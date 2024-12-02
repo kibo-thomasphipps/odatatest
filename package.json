@@ -43,7 +43,11 @@
     "node": ">=10"
   },
   "dependencies": {
-    "@bitauth/libauth": "^1.17.1"
+    "@bitauth/libauth": "^1.17.1",
+    "@odata2ts/odata-query-builder": "^0.18.1",
+    "@odata2ts/odata-query-objects": "^0.26.0",
+    "@odata2ts/odata-service": "^0.22.0",
+    "@odata2ts/odata-uri-builder": "^0.14.1"
   },
   "devDependencies": {
     "@ava/typescript": "^1.1.1",

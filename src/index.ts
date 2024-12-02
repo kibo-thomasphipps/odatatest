@@ -1,8 +1,11 @@
 export * from './lib/async';
 export * from './lib/number';
 import { createQueryBuilderV4 } from "@odata2ts/odata-query-builder"
+
 import { qOrder } from './odata/QChannelAdvisorRestApiV1Models'
+
 import { OrderService } from './odata/ChannelAdvisorRestApiV1ModelsService';
+
 
 const q = createQueryBuilderV4("Order", qOrder)
     .select("CheckoutStatus") // => typesafe: only model attributes are allowed
