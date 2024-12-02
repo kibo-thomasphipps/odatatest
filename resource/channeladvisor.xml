@@ -1,0 +1,1516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0"
+    xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:DataServices>
+        <Schema Namespace="ChannelAdvisor.RestApi.V1.Models"
+            xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityType Name="Order">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="SiteID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="SiteName" Type="Edm.String" />
+                <Property Name="UserDataPresent" Type="Edm.Byte" Nullable="false" />
+                <Property Name="UserDataRemovalDateUTC" Type="Edm.DateTimeOffset" />
+                <Property Name="SiteAccountID" Type="Edm.Int32" />
+                <Property Name="SiteOrderID" Type="Edm.String" />
+                <Property Name="SecondarySiteOrderID" Type="Edm.String" />
+                <Property Name="SellerOrderID" Type="Edm.String" />
+                <Property Name="CheckoutSourceID" Type="Edm.Byte" />
+                <Property Name="Currency" Type="Edm.String" />
+                <Property Name="CreatedDateUtc" Type="Edm.DateTimeOffset" Nullable="false" />
+                <Property Name="ImportDateUtc" Type="Edm.DateTimeOffset" Nullable="false" />
+                <Property Name="UpdatedDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="PublicNotes" Type="Edm.String" />
+                <Property Name="PrivateNotes" Type="Edm.String" />
+                <Property Name="SpecialInstructions" Type="Edm.String" />
+                <Property Name="TotalPrice" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="TotalTaxPrice" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="TotalShippingPrice" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="TotalShippingTaxPrice" Type="Edm.Decimal" />
+                <Property Name="TotalInsurancePrice" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="TotalGiftOptionPrice" Type="Edm.Decimal" />
+                <Property Name="TotalGiftOptionTaxPrice" Type="Edm.Decimal" />
+                <Property Name="AdditionalCostOrDiscount" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="EstimatedShipDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="DeliverByDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="RequestedShippingCarrier" Type="Edm.String" />
+                <Property Name="RequestedShippingClass" Type="Edm.String" />
+                <Property Name="ResellerID" Type="Edm.String" />
+                <Property Name="FlagID" Type="Edm.Int32" />
+                <Property Name="FlagDescription" Type="Edm.String" />
+                <Property Name="OrderTags" Type="Edm.String" />
+                <Property Name="DistributionCenterTypeRollup" Type="ChannelAdvisor.RestApi.V1.Models.DistributionCenterRollupType" Nullable="false" />
+                <Property Name="CheckoutStatus" Type="ChannelAdvisor.RestApi.V1.Models.CheckoutStatus" Nullable="false" />
+                <Property Name="PaymentStatus" Type="ChannelAdvisor.RestApi.V1.Models.PaymentStatus" Nullable="false" />
+                <Property Name="ShippingStatus" Type="ChannelAdvisor.RestApi.V1.Models.ShippingStatus" Nullable="false" />
+                <Property Name="CheckoutDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="PaymentDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="ShippingDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="BuyerUserId" Type="Edm.String" />
+                <Property Name="BuyerEmailAddress" Type="Edm.String" />
+                <Property Name="BuyerEmailOptIn" Type="Edm.Boolean" />
+                <Property Name="OrderTaxType" Type="ChannelAdvisor.RestApi.V1.Models.TaxType" Nullable="false" />
+                <Property Name="ShippingTaxType" Type="ChannelAdvisor.RestApi.V1.Models.TaxType" Nullable="false" />
+                <Property Name="GiftOptionsTaxType" Type="ChannelAdvisor.RestApi.V1.Models.TaxType" Nullable="false" />
+                <Property Name="PaymentMethod" Type="Edm.String" />
+                <Property Name="PaymentTransactionID" Type="Edm.String" />
+                <Property Name="PaymentPaypalAccountID" Type="Edm.String" />
+                <Property Name="PaymentCreditCardLast4" Type="Edm.String" />
+                <Property Name="PaymentMerchantReferenceNumber" Type="Edm.String" />
+                <Property Name="ShippingTitle" Type="Edm.String" />
+                <Property Name="ShippingFirstName" Type="Edm.String" />
+                <Property Name="ShippingLastName" Type="Edm.String" />
+                <Property Name="ShippingSuffix" Type="Edm.String" />
+                <Property Name="ShippingCompanyName" Type="Edm.String" />
+                <Property Name="ShippingCompanyJobTitle" Type="Edm.String" />
+                <Property Name="ShippingDaytimePhone" Type="Edm.String" />
+                <Property Name="ShippingEveningPhone" Type="Edm.String" />
+                <Property Name="ShippingAddressLine1" Type="Edm.String" />
+                <Property Name="ShippingAddressLine2" Type="Edm.String" />
+                <Property Name="ShippingCity" Type="Edm.String" />
+                <Property Name="ShippingStateOrProvince" Type="Edm.String" />
+                <Property Name="ShippingStateOrProvinceName" Type="Edm.String" />
+                <Property Name="ShippingPostalCode" Type="Edm.String" />
+                <Property Name="ShippingCountry" Type="Edm.String" />
+                <Property Name="BillingTitle" Type="Edm.String" />
+                <Property Name="BillingFirstName" Type="Edm.String" />
+                <Property Name="BillingLastName" Type="Edm.String" />
+                <Property Name="BillingSuffix" Type="Edm.String" />
+                <Property Name="BillingCompanyName" Type="Edm.String" />
+                <Property Name="BillingCompanyJobTitle" Type="Edm.String" />
+                <Property Name="BillingDaytimePhone" Type="Edm.String" />
+                <Property Name="BillingEveningPhone" Type="Edm.String" />
+                <Property Name="BillingAddressLine1" Type="Edm.String" />
+                <Property Name="BillingAddressLine2" Type="Edm.String" />
+                <Property Name="BillingCity" Type="Edm.String" />
+                <Property Name="BillingStateOrProvince" Type="Edm.String" />
+                <Property Name="BillingStateOrProvinceName" Type="Edm.String" />
+                <Property Name="BillingPostalCode" Type="Edm.String" />
+                <Property Name="BillingCountry" Type="Edm.String" />
+                <Property Name="PromotionCode" Type="Edm.String" />
+                <Property Name="PromotionAmount" Type="Edm.Decimal" Nullable="false" />
+                <NavigationProperty Name="Items" Type="Collection(ChannelAdvisor.RestApi.V1.Models.OrderItem)" />
+                <NavigationProperty Name="Fulfillments" Type="Collection(ChannelAdvisor.RestApi.V1.Models.Fulfillment)" />
+                <NavigationProperty Name="Adjustments" Type="Collection(ChannelAdvisor.RestApi.V1.Models.OrderAdjustment)" />
+                <NavigationProperty Name="CustomFields" Type="Collection(ChannelAdvisor.RestApi.V1.Models.CustomField)" />
+                <NavigationProperty Name="OrderAttributes" Type="Collection(ChannelAdvisor.RestApi.V1.Models.OrderAttributeValue)" />
+                <NavigationProperty Name="Exports" Type="Collection(ChannelAdvisor.RestApi.V1.Models.ExportStatus)" />
+                <NavigationProperty Name="ChannelDocuments" Type="Collection(ChannelAdvisor.RestApi.V1.Models.ChannelDocument)" />
+            </EntityType>
+            <EntityType Name="OrderItem">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="OrderID" Type="Edm.Int32" />
+                <Property Name="ProductID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="SiteOrderItemID" Type="Edm.String" />
+                <Property Name="SellerOrderItemID" Type="Edm.String" />
+                <Property Name="SiteListingID" Type="Edm.String" />
+                <Property Name="Sku" Type="Edm.String" />
+                <Property Name="Title" Type="Edm.String" />
+                <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
+                <Property Name="UnitPrice" Type="Edm.Decimal" />
+                <Property Name="TaxPrice" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="ShippingPrice" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="ShippingTaxPrice" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="RecyclingFee" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="UnitEstimatedShippingCost" Type="Edm.Decimal" />
+                <Property Name="GiftMessage" Type="Edm.String" />
+                <Property Name="GiftNotes" Type="Edm.String" />
+                <Property Name="GiftPrice" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="GiftTaxPrice" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="IsBundle" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="ItemURL" Type="Edm.String" />
+                <Property Name="HarmonizedCode" Type="Edm.String" />
+                <Property Name="ReferenceSku" Type="Edm.String" />
+                <Property Name="ReferenceProductID" Type="Edm.Int32" />
+                <NavigationProperty Name="Order" Type="ChannelAdvisor.RestApi.V1.Models.Order">
+                    <ReferentialConstraint Property="OrderID" ReferencedProperty="ID" />
+                </NavigationProperty>
+                <NavigationProperty Name="BundleComponents" Type="Collection(ChannelAdvisor.RestApi.V1.Models.OrderItemBundleComponent)" />
+                <NavigationProperty Name="FulfillmentItems" Type="Collection(ChannelAdvisor.RestApi.V1.Models.FulfillmentItem)" />
+                <NavigationProperty Name="Promotions" Type="Collection(ChannelAdvisor.RestApi.V1.Models.Promotion)" />
+                <NavigationProperty Name="Adjustments" Type="Collection(ChannelAdvisor.RestApi.V1.Models.OrderItemAdjustment)" />
+                <NavigationProperty Name="OrderItemAttributes" Type="Collection(ChannelAdvisor.RestApi.V1.Models.OrderItemAttributeValue)" />
+            </EntityType>
+            <EntityType Name="Fulfillment">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="OrderID" Type="Edm.Int32" />
+                <Property Name="CreatedDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="UpdatedDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="Type" Type="ChannelAdvisor.RestApi.V1.Models.FulfillmentType" Nullable="false" />
+                <Property Name="DeliveryStatus" Type="ChannelAdvisor.RestApi.V1.Models.DeliveryStatus" Nullable="false" />
+                <Property Name="TrackingNumber" Type="Edm.String" />
+                <Property Name="TrackingUrl" Type="Edm.String" />
+                <Property Name="ReturnTrackingNumber" Type="Edm.String" />
+                <Property Name="ShippingCarrier" Type="Edm.String" />
+                <Property Name="ShippingClass" Type="Edm.String" />
+                <Property Name="DistributionCenterID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ExternalFulfillmentCenterCode" Type="Edm.String" />
+                <Property Name="ExternalFulfillmentStatus" Type="ChannelAdvisor.RestApi.V1.Models.FulfillmentRequestStatus" />
+                <Property Name="ShippingCost" Type="Edm.Decimal" />
+                <Property Name="InsuranceCost" Type="Edm.Decimal" />
+                <Property Name="TaxCost" Type="Edm.Decimal" />
+                <Property Name="ShippedDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="SellerFulfillmentID" Type="Edm.String" />
+                <Property Name="HasShippingLabel" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="HasChannelPackingSlip" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="HasReturnLabel" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="HasChannelReturnLabel" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="ExternalFulfillmentNumber" Type="Edm.String" />
+                <Property Name="ExternalFulfillmentReferenceNumber" Type="Edm.String" />
+                <Property Name="ShippingLabelRequestID" Type="Edm.String" />
+                <Property Name="StagingLocation" Type="Edm.String" />
+                <Property Name="SerialShippingContainerCode" Type="Edm.String" />
+                <Property Name="EarliestDeliveryDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="EarliestShipDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="EstimatedDeliveryDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="EstimatedShipDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="LabelFormat" Type="ChannelAdvisor.PostSale.RestApi.V1.Models.LabelFormatType" />
+                <Property Name="ReturnLabelFormat" Type="ChannelAdvisor.PostSale.RestApi.V1.Models.LabelFormatType" />
+                <Property Name="ChannelReturnLabelFormat" Type="ChannelAdvisor.PostSale.RestApi.V1.Models.LabelFormatType" />
+                <NavigationProperty Name="Order" Type="ChannelAdvisor.RestApi.V1.Models.Order">
+                    <ReferentialConstraint Property="OrderID" ReferencedProperty="ID" />
+                </NavigationProperty>
+                <NavigationProperty Name="Items" Type="Collection(ChannelAdvisor.RestApi.V1.Models.FulfillmentItem)" />
+            </EntityType>
+            <EntityType Name="FulfillmentItem">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="DistributionCenterItemUnitCost" Type="Edm.Decimal" />
+                <Property Name="DistributionCenterShippingCost" Type="Edm.Decimal" />
+                <Property Name="DistributionCenterCalculatedItemUnitCost" Type="Edm.Decimal" />
+                <Property Name="DistributionCenterCalculatedShippingCost" Type="Edm.Decimal" />
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Sku" Type="Edm.String" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="FulfillmentID" Type="Edm.Int32" />
+                <Property Name="OrderID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="OrderItemID" Type="Edm.Int32" />
+                <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProductID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="SellerFulfillmentItemID" Type="Edm.String" />
+                <Property Name="MarketplaceShippingStatus" Type="ChannelAdvisor.RestApi.V1.Models.FulfillmentItemSiteCommunicationStatus" Nullable="false" />
+                <Property Name="ReferenceSku" Type="Edm.String" />
+                <Property Name="ReferenceProductID" Type="Edm.Int32" />
+                <Property Name="WarehouseLocation" Type="Edm.String" />
+                <NavigationProperty Name="Fulfillment" Type="ChannelAdvisor.RestApi.V1.Models.Fulfillment">
+                    <ReferentialConstraint Property="FulfillmentID" ReferencedProperty="ID" />
+                </NavigationProperty>
+                <NavigationProperty Name="OrderItem" Type="ChannelAdvisor.RestApi.V1.Models.OrderItem">
+                    <ReferentialConstraint Property="OrderItemID" ReferencedProperty="ID" />
+                </NavigationProperty>
+                <NavigationProperty Name="BundleComponent" Type="ChannelAdvisor.RestApi.V1.Models.OrderItemBundleComponent" />
+            </EntityType>
+            <EntityType Name="DistributionCenter">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Name" Type="Edm.String" />
+                <Property Name="Code" Type="Edm.String" />
+                <Property Name="FulfillmentPartnerName" Type="Edm.String" />
+                <Property Name="ContactName" Type="Edm.String" />
+                <Property Name="ContactEmail" Type="Edm.String" />
+                <Property Name="ContactPhone" Type="Edm.String" />
+                <Property Name="Address1" Type="Edm.String" />
+                <Property Name="Address2" Type="Edm.String" />
+                <Property Name="City" Type="Edm.String" />
+                <Property Name="StateOrProvince" Type="Edm.String" />
+                <Property Name="Country" Type="Edm.String" />
+                <Property Name="PostalCode" Type="Edm.String" />
+                <Property Name="PickupLocation" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="ShipLocation" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="Type" Type="ChannelAdvisor.RestApi.V1.Models.DistributionCenterType" />
+                <Property Name="IsExternallyManaged" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="IsDeleted" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="DeletedDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="County" Type="Edm.String" />
+                <Property Name="District" Type="Edm.String" />
+                <Property Name="TimeZone" Type="Edm.String" />
+                <Property Name="HandlingTimeMinutes" Type="Edm.Int32" />
+                <Property Name="DeliveryAvailable" Type="Edm.Boolean" />
+                <Property Name="PickupOrderHoldMinutes" Type="Edm.Int32" />
+                <Property Name="ThroughputLimitNumber" Type="Edm.Int32" />
+                <Property Name="ThroughputLimitUnits" Type="ChannelAdvisor.RestApi.V1.Models.ThroughputLimitUnits" />
+                <Property Name="MainPhone" Type="Edm.String" />
+                <Property Name="AltPhone" Type="Edm.String" />
+                <Property Name="Fax" Type="Edm.String" />
+                <Property Name="HomePage" Type="Edm.String" />
+                <Property Name="Email" Type="Edm.String" />
+                <Property Name="BusinessDescription" Type="Edm.String" />
+                <Property Name="Latitude" Type="Edm.Decimal" />
+                <Property Name="Longitude" Type="Edm.Decimal" />
+                <Property Name="StoreCategories" Type="Edm.String" />
+                <Property Name="CourierPickupInstructions" Type="Edm.String" />
+                <Property Name="CustomerPickupInstructions" Type="Edm.String" />
+                <Property Name="PickupInstructions" Type="Edm.String" />
+                <NavigationProperty Name="OperatingHours" Type="Collection(ChannelAdvisor.RestApi.V1.Models.OperatingHours)" />
+            </EntityType>
+            <EntityType Name="OperatingHours">
+                <Key>
+                    <PropertyRef Name="DayID" />
+                    <PropertyRef Name="DistributionCenterID" />
+                </Key>
+                <Property Name="DistributionCenterID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="DayID" Type="ChannelAdvisor.RestApi.V1.Models.DayIdentifier" Nullable="false" />
+                <Property Name="OpenTime" Type="Edm.String" />
+                <Property Name="CloseTime" Type="Edm.String" />
+            </EntityType>
+            <EntityType Name="OrderAdjustment">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="CreatedSource" Type="ChannelAdvisor.RestApi.V1.Models.AdjustmentSource" />
+                <Property Name="LastUpdatedSource" Type="ChannelAdvisor.RestApi.V1.Models.AdjustmentSource" />
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="OrderID" Type="Edm.Int32" />
+                <Property Name="IsRestock" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="Reason" Type="ChannelAdvisor.RestApi.V1.Models.AdjustmentReason" Nullable="false" />
+                <Property Name="ItemAdjustment" Type="Edm.Decimal" />
+                <Property Name="TaxAdjustment" Type="Edm.Decimal" />
+                <Property Name="ShippingAdjustment" Type="Edm.Decimal" />
+                <Property Name="ShippingTaxAdjustment" Type="Edm.Decimal" />
+                <Property Name="GiftWrapAdjustment" Type="Edm.Decimal" />
+                <Property Name="GiftWrapTaxAdjustment" Type="Edm.Decimal" />
+                <Property Name="RecyclingFeeAdjustment" Type="Edm.Decimal" />
+                <Property Name="Type" Type="ChannelAdvisor.RestApi.V1.Models.AdjustmentType" Nullable="false" />
+                <Property Name="SellerAdjustmentID" Type="Edm.String" />
+                <Property Name="SiteAdjustmentID" Type="Edm.String" />
+                <Property Name="SiteRefundDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="AdjustmentTransactionID" Type="Edm.String" />
+                <Property Name="PublicNotes" Type="Edm.String" />
+                <Property Name="Comment" Type="Edm.String" />
+                <Property Name="CreatedDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="RequestStatus" Type="ChannelAdvisor.RestApi.V1.Models.AsyncStatus" Nullable="false" />
+                <Property Name="RestockStatus" Type="ChannelAdvisor.RestApi.V1.Models.AsyncStatus" />
+                <Property Name="RmaNumber" Type="Edm.String" />
+                <Property Name="ReturnShippingFee" Type="Edm.Decimal" />
+                <Property Name="RestockingFee" Type="Edm.Decimal" />
+                <Property Name="ReturnTrackingNumberOrUrl" Type="Edm.String" />
+                <Property Name="ReturnShippingMethod" Type="Edm.String" />
+                <NavigationProperty Name="Order" Type="ChannelAdvisor.RestApi.V1.Models.Order">
+                    <ReferentialConstraint Property="OrderID" ReferencedProperty="ID" />
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="OrderItemAdjustment">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="CreatedSource" Type="ChannelAdvisor.RestApi.V1.Models.AdjustmentSource" />
+                <Property Name="LastUpdatedSource" Type="ChannelAdvisor.RestApi.V1.Models.AdjustmentSource" />
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="OrderID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="OrderItemID" Type="Edm.Int32" />
+                <Property Name="Quantity" Type="Edm.Int32" />
+                <Property Name="IsRestock" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="Reason" Type="ChannelAdvisor.RestApi.V1.Models.AdjustmentReason" Nullable="false" />
+                <Property Name="ItemAdjustment" Type="Edm.Decimal" />
+                <Property Name="TaxAdjustment" Type="Edm.Decimal" />
+                <Property Name="ShippingAdjustment" Type="Edm.Decimal" />
+                <Property Name="ShippingTaxAdjustment" Type="Edm.Decimal" />
+                <Property Name="GiftWrapAdjustment" Type="Edm.Decimal" />
+                <Property Name="GiftWrapTaxAdjustment" Type="Edm.Decimal" />
+                <Property Name="RecyclingFeeAdjustment" Type="Edm.Decimal" />
+                <Property Name="Type" Type="ChannelAdvisor.RestApi.V1.Models.AdjustmentType" Nullable="false" />
+                <Property Name="SellerAdjustmentID" Type="Edm.String" />
+                <Property Name="SiteAdjustmentID" Type="Edm.String" />
+                <Property Name="SiteRefundDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="AdjustmentTransactionID" Type="Edm.String" />
+                <Property Name="PublicNotes" Type="Edm.String" />
+                <Property Name="Comment" Type="Edm.String" />
+                <Property Name="CreatedDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="RequestStatus" Type="ChannelAdvisor.RestApi.V1.Models.AsyncStatus" Nullable="false" />
+                <Property Name="RestockStatus" Type="ChannelAdvisor.RestApi.V1.Models.AsyncStatus" />
+                <Property Name="RmaNumber" Type="Edm.String" />
+                <Property Name="ReturnShippingFee" Type="Edm.Decimal" />
+                <Property Name="RestockingFee" Type="Edm.Decimal" />
+                <Property Name="ReturnTrackingNumberOrUrl" Type="Edm.String" />
+                <Property Name="ReturnShippingMethod" Type="Edm.String" />
+                <Property Name="ReferenceSku" Type="Edm.String" />
+                <Property Name="ReferenceProductID" Type="Edm.Int32" />
+                <NavigationProperty Name="OrderItem" Type="ChannelAdvisor.RestApi.V1.Models.OrderItem">
+                    <ReferentialConstraint Property="OrderItemID" ReferencedProperty="ID" />
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="OrderItemBundleComponent">
+                <Key>
+                    <PropertyRef Name="OrderID" />
+                    <PropertyRef Name="OrderItemID" />
+                    <PropertyRef Name="ProductID" />
+                </Key>
+                <Property Name="OrderID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="OrderItemID" Type="Edm.Int32" />
+                <Property Name="ProductID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="BundleProductID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Sku" Type="Edm.String" />
+                <Property Name="BundleSku" Type="Edm.String" />
+                <Property Name="Title" Type="Edm.String" />
+                <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ReferenceProductID" Type="Edm.Int32" />
+                <Property Name="ReferenceSku" Type="Edm.String" />
+                <NavigationProperty Name="OrderItem" Type="ChannelAdvisor.RestApi.V1.Models.OrderItem">
+                    <ReferentialConstraint Property="OrderItemID" ReferencedProperty="ID" />
+                </NavigationProperty>
+                <NavigationProperty Name="FulfillmentItems" Type="Collection(ChannelAdvisor.RestApi.V1.Models.FulfillmentItem)" />
+            </EntityType>
+            <EntityType Name="Promotion">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Code" Type="Edm.String" />
+                <Property Name="Amount" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="ShippingAmount" Type="Edm.Decimal" Nullable="false" />
+                <NavigationProperty Name="OrderItem" Type="ChannelAdvisor.RestApi.V1.Models.OrderItem" />
+            </EntityType>
+            <EntityType Name="CustomField">
+                <Key>
+                    <PropertyRef Name="FieldID" />
+                    <PropertyRef Name="OrderID" />
+                </Key>
+                <Property Name="FieldID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="OrderID" Type="Edm.Int32" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Value" Type="Edm.String" />
+                <NavigationProperty Name="Order" Type="ChannelAdvisor.RestApi.V1.Models.Order">
+                    <ReferentialConstraint Property="OrderID" ReferencedProperty="ID" />
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="Profile">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="AccountName" Type="Edm.String" />
+                <Property Name="CompanyName" Type="Edm.String" />
+                <Property Name="CurrencyCode" Type="Edm.String" />
+                <Property Name="TimeZoneRegion" Type="Edm.String" />
+                <Property Name="TimeZoneDescription" Type="Edm.String" />
+                <Property Name="DefaultDistributionCenterID" Type="Edm.Int32" Nullable="false" />
+                <NavigationProperty Name="SiteAccounts" Type="Collection(ChannelAdvisor.RestApi.V1.Models.SiteAccount)" />
+                <NavigationProperty Name="ShippingLabelPartnerAccounts" Type="Collection(ChannelAdvisor.RestApi.V1.Models.ShippingLabelPartnerAccount)" />
+            </EntityType>
+            <EntityType Name="Product">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="CreateDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="UpdateDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="QuantityUpdateDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="IsAvailableInStore" Type="Edm.Boolean" />
+                <Property Name="IsBlocked" Type="Edm.Boolean" />
+                <Property Name="IsBlockedFromAdvertising" Type="Edm.Boolean" />
+                <Property Name="IsExternalQuantityBlocked" Type="Edm.Boolean" />
+                <Property Name="InfiniteQuantity" Type="Edm.Boolean" />
+                <Property Name="BlockComment" Type="Edm.String" />
+                <Property Name="BlockedDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="BlockedFromAdvertisingDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="ReceivedDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="LastSaleDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="ASIN" Type="Edm.String" />
+                <Property Name="Brand" Type="Edm.String" />
+                <Property Name="Condition" Type="Edm.String" />
+                <Property Name="Description" Type="Edm.String" />
+                <Property Name="EAN" Type="Edm.String" />
+                <Property Name="FlagDescription" Type="Edm.String" />
+                <Property Name="Flag" Type="ChannelAdvisor.RestApi.V1.Models.FlagType" Nullable="false" />
+                <Property Name="HarmonizedCode" Type="Edm.String" />
+                <Property Name="ISBN" Type="Edm.String" />
+                <Property Name="Manufacturer" Type="Edm.String" />
+                <Property Name="MPN" Type="Edm.String" />
+                <Property Name="ShortDescription" Type="Edm.String" />
+                <Property Name="Sku" Type="Edm.String" />
+                <Property Name="Subtitle" Type="Edm.String" />
+                <Property Name="TaxProductCode" Type="Edm.String" />
+                <Property Name="Title" Type="Edm.String" />
+                <Property Name="UPC" Type="Edm.String" />
+                <Property Name="WarehouseLocation" Type="Edm.String" />
+                <Property Name="Warranty" Type="Edm.String" />
+                <Property Name="MultipackQuantity" Type="Edm.Int32" />
+                <Property Name="Height" Type="Edm.Decimal" />
+                <Property Name="Length" Type="Edm.Decimal" />
+                <Property Name="Width" Type="Edm.Decimal" />
+                <Property Name="Weight" Type="Edm.Double" />
+                <Property Name="Cost" Type="Edm.Decimal" />
+                <Property Name="Margin" Type="Edm.Decimal" />
+                <Property Name="RetailPrice" Type="Edm.Decimal" />
+                <Property Name="StartingPrice" Type="Edm.Decimal" />
+                <Property Name="ReservePrice" Type="Edm.Decimal" />
+                <Property Name="BuyItNowPrice" Type="Edm.Decimal" />
+                <Property Name="StorePrice" Type="Edm.Decimal" />
+                <Property Name="SecondChancePrice" Type="Edm.Decimal" />
+                <Property Name="MinPrice" Type="Edm.Decimal" />
+                <Property Name="MaxPrice" Type="Edm.Decimal" />
+                <Property Name="EstimatedShippingCost" Type="Edm.Decimal" />
+                <Property Name="SupplierName" Type="Edm.String" />
+                <Property Name="SupplierCode" Type="Edm.String" />
+                <Property Name="SupplierPO" Type="Edm.String" />
+                <Property Name="Classification" Type="Edm.String" />
+                <Property Name="IsDisplayInStore" Type="Edm.Boolean" />
+                <Property Name="StoreTitle" Type="Edm.String" />
+                <Property Name="StoreDescription" Type="Edm.String" />
+                <Property Name="BundleType" Type="ChannelAdvisor.RestApi.V1.Models.BundleType" Nullable="false" />
+                <Property Name="ProductType" Type="ChannelAdvisor.RestApi.V1.Models.InventoryItemType" Nullable="false" />
+                <Property Name="TotalAvailableQuantity" Type="Edm.Int32" />
+                <Property Name="OpenAllocatedQuantity" Type="Edm.Int64" Nullable="false" />
+                <Property Name="OpenAllocatedQuantityPooled" Type="Edm.Int64" Nullable="false" />
+                <Property Name="PendingCheckoutQuantity" Type="Edm.Int64" Nullable="false" />
+                <Property Name="PendingCheckoutQuantityPooled" Type="Edm.Int64" Nullable="false" />
+                <Property Name="PendingPaymentQuantity" Type="Edm.Int64" Nullable="false" />
+                <Property Name="PendingPaymentQuantityPooled" Type="Edm.Int64" Nullable="false" />
+                <Property Name="PendingShipmentQuantity" Type="Edm.Int64" Nullable="false" />
+                <Property Name="PendingShipmentQuantityPooled" Type="Edm.Int64" Nullable="false" />
+                <Property Name="TotalQuantity" Type="Edm.Int64" />
+                <Property Name="TotalQuantityPooled" Type="Edm.Int64" />
+                <Property Name="QuantitySoldLast7Days" Type="Edm.Int32" />
+                <Property Name="QuantitySoldLast14Days" Type="Edm.Int32" />
+                <Property Name="QuantitySoldLast30Days" Type="Edm.Int32" />
+                <Property Name="QuantitySoldLast60Days" Type="Edm.Int32" />
+                <Property Name="QuantitySoldLast90Days" Type="Edm.Int32" />
+                <Property Name="IsParent" Type="Edm.Boolean" />
+                <Property Name="IsInRelationship" Type="Edm.Boolean" />
+                <Property Name="CopyToChildren" Type="Edm.Boolean" />
+                <Property Name="CopyToAliases" Type="Edm.String" />
+                <Property Name="ParentProductID" Type="Edm.Int32" />
+                <Property Name="ParentSku" Type="Edm.String" />
+                <Property Name="RelationshipName" Type="Edm.String" />
+                <Property Name="VaryBy" Type="Edm.String" />
+                <Property Name="AliasType" Type="ChannelAdvisor.RestApi.V1.Models.AliasType" Nullable="false" />
+                <Property Name="ReferenceSku" Type="Edm.String" />
+                <Property Name="ReferenceProductID" Type="Edm.Int32" />
+                <NavigationProperty Name="Attributes" Type="Collection(ChannelAdvisor.RestApi.V1.Models.AttributeValue)" />
+                <NavigationProperty Name="DCQuantities" Type="Collection(ChannelAdvisor.RestApi.V1.Models.DCQuantity)" />
+                <NavigationProperty Name="Images" Type="Collection(ChannelAdvisor.RestApi.V1.Models.Image)" />
+                <NavigationProperty Name="Labels" Type="Collection(ChannelAdvisor.RestApi.V1.Models.ProductLabel)" />
+                <NavigationProperty Name="BundleComponents" Type="Collection(ChannelAdvisor.RestApi.V1.Models.ProductBundleComponent)" />
+                <NavigationProperty Name="Children" Type="Collection(ChannelAdvisor.RestApi.V1.Models.ChildRelationship)" />
+                <NavigationProperty Name="AliasRelationships" Type="Collection(ChannelAdvisor.RestApi.V1.Models.AliasRelationship)" />
+            </EntityType>
+            <EntityType Name="AliasRelationship">
+                <Key>
+                    <PropertyRef Name="AliasProductID" />
+                    <PropertyRef Name="ProfileID" />
+                    <PropertyRef Name="ReferenceProductID" />
+                </Key>
+                <Property Name="AliasProductID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ReferenceProductID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="AliasProductSku" Type="Edm.String" />
+                <NavigationProperty Name="Product" Type="ChannelAdvisor.RestApi.V1.Models.Product" />
+            </EntityType>
+            <EntityType Name="Image">
+                <Key>
+                    <PropertyRef Name="PlacementName" />
+                    <PropertyRef Name="ProductID" />
+                </Key>
+                <Property Name="ProductID" Type="Edm.Int32" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="PlacementName" Type="Edm.String" Nullable="false" />
+                <Property Name="Abbreviation" Type="Edm.String" />
+                <Property Name="Url" Type="Edm.String" />
+                <NavigationProperty Name="Product" Type="ChannelAdvisor.RestApi.V1.Models.Product">
+                    <ReferentialConstraint Property="ProductID" ReferencedProperty="ID" />
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="AttributeValue">
+                <Key>
+                    <PropertyRef Name="Name" />
+                    <PropertyRef Name="ProductID" />
+                </Key>
+                <Property Name="ProductID" Type="Edm.Int32" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Name" Type="Edm.String" Nullable="false" />
+                <Property Name="Value" Type="Edm.String" />
+                <NavigationProperty Name="Product" Type="ChannelAdvisor.RestApi.V1.Models.Product">
+                    <ReferentialConstraint Property="ProductID" ReferencedProperty="ID" />
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="DCQuantity">
+                <Key>
+                    <PropertyRef Name="DistributionCenterID" />
+                    <PropertyRef Name="ProductID" />
+                </Key>
+                <Property Name="ProductID" Type="Edm.Int32" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="DistributionCenterID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="AvailableQuantity" Type="Edm.Int32" Nullable="false" />
+                <NavigationProperty Name="Product" Type="ChannelAdvisor.RestApi.V1.Models.Product">
+                    <ReferentialConstraint Property="ProductID" ReferencedProperty="ID" />
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="ProductLabel">
+                <Key>
+                    <PropertyRef Name="Name" />
+                    <PropertyRef Name="ProductID" />
+                </Key>
+                <Property Name="ProductID" Type="Edm.Int32" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Name" Type="Edm.String" Nullable="false" />
+                <NavigationProperty Name="Product" Type="ChannelAdvisor.RestApi.V1.Models.Product">
+                    <ReferentialConstraint Property="ProductID" ReferencedProperty="ID" />
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="ProductBundleComponent">
+                <Key>
+                    <PropertyRef Name="ComponentID" />
+                    <PropertyRef Name="ProductID" />
+                </Key>
+                <Property Name="ProductID" Type="Edm.Int32" />
+                <Property Name="ComponentID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ComponentSku" Type="Edm.String" />
+                <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
+                <NavigationProperty Name="Product" Type="ChannelAdvisor.RestApi.V1.Models.Product">
+                    <ReferentialConstraint Property="ProductID" ReferencedProperty="ID" />
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="ChildRelationship">
+                <Key>
+                    <PropertyRef Name="ChildProductID" />
+                    <PropertyRef Name="ParentProductID" />
+                </Key>
+                <Property Name="ParentProductID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ChildProductID" Type="Edm.Int32" Nullable="false" />
+                <NavigationProperty Name="ChildProduct" Type="ChannelAdvisor.RestApi.V1.Models.Product" />
+            </EntityType>
+            <EntityType Name="Package">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Name" Type="Edm.String" />
+                <Property Name="Description" Type="Edm.String" />
+                <Property Name="ShippingCarrier" Type="Edm.String" />
+                <Property Name="Length" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="Width" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="Height" Type="Edm.Decimal" Nullable="false" />
+                <Property Name="EmptyWeight" Type="Edm.Decimal" />
+            </EntityType>
+            <EntityType Name="ChannelDocument">
+                <Key>
+                    <PropertyRef Name="DocumentKey" />
+                </Key>
+                <Property Name="DocumentKey" Type="Edm.String" Nullable="false" />
+                <Property Name="Contents" Type="Edm.String" />
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="DocumentType" Type="ChannelAdvisor.RestApi.V1.Models.ChannelDocumentType" Nullable="false" />
+            </EntityType>
+            <EntityType Name="NotSuppliedChannelDocument">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="DocumentType" Type="ChannelAdvisor.RestApi.V1.Models.ChannelDocumentType" Nullable="false" />
+            </EntityType>
+            <EntityType Name="Site">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="SiteName" Type="Edm.String" />
+                <Property Name="SiteCategoryID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="SiteCategoryName" Type="Edm.String" />
+                <Property Name="CancellationConfiguration" Type="ChannelAdvisor.RestApi.V1.Models.CancellationConfiguration" />
+                <Property Name="RefundConfiguration" Type="ChannelAdvisor.RestApi.V1.Models.RefundConfiguration" />
+                <Property Name="AdjustmentReasons" Type="Collection(ChannelAdvisor.RestApi.V1.Models.CodeDescription)" />
+            </EntityType>
+            <EntityType Name="OrderDocumentFlyweight">
+                <Key>
+                    <PropertyRef Name="DocumentKey" />
+                    <PropertyRef Name="OrderID" />
+                </Key>
+                <Property Name="DocumentKey" Type="Edm.String" Nullable="false" />
+                <Property Name="OrderID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="CreateDateUtc" Type="Edm.DateTimeOffset" Nullable="false" />
+                <Property Name="DocumentType" Type="ChannelAdvisor.RestApi.V1.Models.DocumentType" Nullable="false" />
+                <Property Name="MimeType" Type="Edm.String" />
+                <Property Name="DocumentSource" Type="ChannelAdvisor.RestApi.V1.Models.DocumentSourceType" Nullable="false" />
+            </EntityType>
+            <EntityType Name="OrderDocument" BaseType="ChannelAdvisor.RestApi.V1.Models.OrderDocumentFlyweight">
+                <Property Name="Content" Type="Edm.String" />
+                <NavigationProperty Name="Metadata" Type="Collection(ChannelAdvisor.RestApi.V1.Models.OrderDocumentMetadata)" />
+            </EntityType>
+            <EntityType Name="OrderDocumentMetadata">
+                <Key>
+                    <PropertyRef Name="Key" />
+                </Key>
+                <Property Name="Key" Type="Edm.String" Nullable="false" />
+                <Property Name="Value" Type="Edm.String" />
+            </EntityType>
+            <EntityType Name="OrderAttributeValue">
+                <Key>
+                    <PropertyRef Name="Name" />
+                    <PropertyRef Name="OrderID" />
+                </Key>
+                <Property Name="Value" Type="Edm.String" />
+                <Property Name="Name" Type="Edm.String" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="OrderID" Type="Edm.Int32" />
+                <NavigationProperty Name="Order" Type="ChannelAdvisor.RestApi.V1.Models.Order">
+                    <ReferentialConstraint Property="OrderID" ReferencedProperty="ID" />
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="OrderItemAttributeValue">
+                <Key>
+                    <PropertyRef Name="Name" />
+                    <PropertyRef Name="OrderItemID" />
+                </Key>
+                <Property Name="Value" Type="Edm.String" />
+                <Property Name="Name" Type="Edm.String" Nullable="false" />
+                <Property Name="OrderID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="OrderItemID" Type="Edm.Int32" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <NavigationProperty Name="OrderItem" Type="ChannelAdvisor.RestApi.V1.Models.OrderItem">
+                    <ReferentialConstraint Property="OrderItemID" ReferencedProperty="ID" />
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="ShippingOverride">
+                <Property Name="Sku" Type="Edm.String" />
+                <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
+                <Property Name="DistributionCenterID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ShippingCarrier" Type="Edm.String" />
+                <Property Name="ShippingClass" Type="Edm.String" />
+                <Property Name="TrackingNumber" Type="Edm.String" />
+                <Property Name="TrackingUrl" Type="Edm.String" />
+                <Property Name="SellerFulfillmentID" Type="Edm.String" />
+                <Property Name="ShippedDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="ApplyShippingRules" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="EstimatedShipDateUtc" Type="Edm.DateTimeOffset" />
+            </EntityType>
+            <ComplexType Name="ShipOrderRequest">
+                <Property Name="ShippedDateUtc" Type="Edm.DateTimeOffset" />
+                <Property Name="TrackingNumber" Type="Edm.String" />
+                <Property Name="ReturnTrackingNumber" Type="Edm.String" />
+                <Property Name="ShippingCarrier" Type="Edm.String" />
+                <Property Name="ShippingClass" Type="Edm.String" />
+                <Property Name="DistributionCenterID" Type="Edm.Int32" />
+                <Property Name="SellerFulfillmentID" Type="Edm.String" />
+                <Property Name="DeliveryStatus" Type="ChannelAdvisor.RestApi.V1.Models.DeliveryStatus" />
+                <Property Name="FulfillmentType" Type="ChannelAdvisor.RestApi.V1.Models.FulfillmentType" />
+                <Property Name="PreventMarketplaceCommunication" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="TrackingUrl" Type="Edm.String" />
+                <Property Name="SerialShippingContainerCode" Type="Edm.String" />
+                <Property Name="Items" Type="Collection(ChannelAdvisor.RestApi.V1.Models.ShipOrderRequestItem)" />
+            </ComplexType>
+            <ComplexType Name="ShippingItems">
+                <Property Name="FulfillmentItemID" Type="Edm.Int32" />
+                <Property Name="OrderItemID" Type="Edm.Int32" />
+                <Property Name="Sku" Type="Edm.String" />
+                <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Description" Type="Edm.String" />
+                <Property Name="UnitWeight" Type="Edm.Decimal" />
+            </ComplexType>
+            <ComplexType Name="PickupLabelLineItem">
+                <Property Name="OrderItemID" Type="Edm.Int32" />
+                <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
+                <Property Name="SerialNumbers" Type="Collection(Edm.String)" />
+                <Property Name="SiteOrderItemID" Type="Edm.String" />
+                <Property Name="Sku" Type="Edm.String" />
+            </ComplexType>
+            <ComplexType Name="RmaConditionQuantity">
+                <Property Name="Condition" Type="Edm.String" />
+                <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
+            </ComplexType>
+            <ComplexType Name="QuantityUpdateRequest">
+                <Property Name="CompleteDCList" Type="Edm.Boolean" />
+                <Property Name="UpdateType" Type="ChannelAdvisor.RestApi.V1.Models.QuantityUpdateType" />
+                <Property Name="Updates" Type="Collection(ChannelAdvisor.RestApi.V1.Models.DCxQtyUpdate)" />
+            </ComplexType>
+            <ComplexType Name="ChildrenRemoveRequest">
+                <Property Name="ChildProductIDList" Type="Collection(Edm.Int32)" Nullable="false" />
+            </ComplexType>
+            <ComplexType Name="AttributesUpdateRequest">
+                <Property Name="Attributes" Type="Collection(ChannelAdvisor.RestApi.V1.Models.AttributeUpdate)" />
+            </ComplexType>
+            <EntityType Name="ExportStatus">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProfileID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="OrderID" Type="Edm.Int32" />
+                <Property Name="ApplicationID" Type="Edm.Int32" />
+                <Property Name="DeveloperKey" Type="Edm.String" />
+                <Property Name="Override" Type="Edm.Boolean" Nullable="false" />
+                <NavigationProperty Name="Order" Type="ChannelAdvisor.RestApi.V1.Models.Order">
+                    <ReferentialConstraint Property="OrderID" ReferencedProperty="ID" />
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="AmazonVATInvoiceDocument" BaseType="ChannelAdvisor.RestApi.V1.Models.ChannelDocument">
+                <Property Name="OrderID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="AdjustmentID" Type="Edm.String" />
+                <Property Name="Status" Type="ChannelAdvisor.RestApi.V1.Models.AmazonVATInvoiceRequestStatus" Nullable="false" />
+                <Property Name="InvoiceNumber" Type="Edm.String" />
+                <Property Name="TotalAmount" Type="Edm.Decimal" />
+                <Property Name="TotalVATAmount" Type="Edm.Decimal" />
+                <Property Name="CreateDateUTC" Type="Edm.DateTimeOffset" Nullable="false" />
+                <Property Name="UpdateDateUTC" Type="Edm.DateTimeOffset" Nullable="false" />
+            </EntityType>
+            <EntityType Name="SiteAccount">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="SiteAccountName" Type="Edm.String" />
+                <Property Name="SiteID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="SiteName" Type="Edm.String" />
+                <Property Name="Enabled" Type="Edm.Boolean" Nullable="false" />
+                <NavigationProperty Name="Profile" Type="ChannelAdvisor.RestApi.V1.Models.Profile" />
+            </EntityType>
+            <EntityType Name="ShippingLabelPartnerAccount">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="AccountName" Type="Edm.String" />
+                <Property Name="PartnerName" Type="Edm.String" />
+                <NavigationProperty Name="Profile" Type="ChannelAdvisor.RestApi.V1.Models.Profile" />
+            </EntityType>
+            <EntityType Name="NotSuppliedAmazonVATInvoiceDocument" BaseType="ChannelAdvisor.RestApi.V1.Models.NotSuppliedChannelDocument">
+                <Property Name="OrderID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="AdjustmentID" Type="Edm.String" />
+                <Property Name="CreateDateUTC" Type="Edm.DateTimeOffset" Nullable="false" />
+            </EntityType>
+            <ComplexType Name="CancellationConfiguration">
+                <Property Name="SupportsOrderCancellations" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="SupportsOrderItemCancellations" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="SupportsOrderItemRMACancellations" Type="Edm.Boolean" Nullable="false" />
+            </ComplexType>
+            <ComplexType Name="RefundConfiguration">
+                <Property Name="SupportsOrderRefunds" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="SupportsOrderItemRefunds" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="SupportsOrderItemRMARefunds" Type="Edm.Boolean" Nullable="false" />
+            </ComplexType>
+            <ComplexType Name="CodeDescription">
+                <Property Name="Code" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Description" Type="Edm.String" />
+            </ComplexType>
+            <ComplexType Name="ShipOrderRequestItem">
+                <Property Name="OrderItemID" Type="Edm.Int32" />
+                <Property Name="ProductID" Type="Edm.Int32" />
+                <Property Name="Sku" Type="Edm.String" />
+                <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
+                <Property Name="SellerFulfillmentItemID" Type="Edm.String" />
+                <Property Name="ReferenceSku" Type="Edm.String" />
+            </ComplexType>
+            <ComplexType Name="DCxQtyUpdate">
+                <Property Name="DistributionCenterID" Type="Edm.Int32" />
+                <Property Name="Quantity" Type="Edm.Int32" />
+            </ComplexType>
+            <ComplexType Name="AttributeUpdate">
+                <Property Name="Name" Type="Edm.String" />
+                <Property Name="Value" Type="Edm.String" />
+            </ComplexType>
+            <EnumType Name="DeliveryConfirmationType" UnderlyingType="Edm.Byte">
+                <Member Name="Default" Value="0" />
+                <Member Name="SignatureRequired" Value="1" />
+                <Member Name="AdultSignatureRequired" Value="2" />
+                <Member Name="NoDeliveryConfirmation" Value="3" />
+            </EnumType>
+            <EnumType Name="MeasurementUnit">
+                <Member Name="Centimeter" Value="0" />
+                <Member Name="Inch" Value="1" />
+            </EnumType>
+            <EnumType Name="WeightUnit">
+                <Member Name="Gram" Value="0" />
+                <Member Name="Pound" Value="1" />
+            </EnumType>
+            <EnumType Name="ExportReason">
+                <Member Name="MERCHANDISE" Value="0" />
+                <Member Name="DOCUMENTS" Value="1" />
+            </EnumType>
+            <EnumType Name="AdjustmentReason">
+                <Member Name="GeneralAdjustment" Value="100" />
+                <Member Name="ItemNotAvailable" Value="101" />
+                <Member Name="CustomerReturnedItem" Value="102" />
+                <Member Name="CouldNotShip" Value="103" />
+                <Member Name="AlternateItemProvided" Value="104" />
+                <Member Name="BuyerCancelled" Value="105" />
+                <Member Name="CustomerExchange" Value="106" />
+                <Member Name="MerchandiseNotReceived" Value="107" />
+                <Member Name="ShippingAddressUndeliverable" Value="108" />
+            </EnumType>
+            <EnumType Name="DistributionCenterRollupType" UnderlyingType="Edm.Byte">
+                <Member Name="SellerManaged" Value="0" />
+                <Member Name="ExternallyManaged" Value="1" />
+                <Member Name="Mixed" Value="2" />
+            </EnumType>
+            <EnumType Name="CheckoutStatus" UnderlyingType="Edm.Int16">
+                <Member Name="NotVisited" Value="0" />
+                <Member Name="Completed" Value="1" />
+                <Member Name="Visited" Value="2" />
+                <Member Name="CompletedAndVisited" Value="3" />
+                <Member Name="Disabled" Value="4" />
+                <Member Name="CompletedOffline" Value="8" />
+                <Member Name="OnHold" Value="16" />
+            </EnumType>
+            <EnumType Name="PaymentStatus" UnderlyingType="Edm.Int16">
+                <Member Name="NotYetSubmitted" Value="0" />
+                <Member Name="Cleared" Value="1" />
+                <Member Name="Submitted" Value="2" />
+                <Member Name="Failed" Value="4" />
+                <Member Name="Deposited" Value="8" />
+            </EnumType>
+            <EnumType Name="ShippingStatus" UnderlyingType="Edm.Int16">
+                <Member Name="Unshipped" Value="0" />
+                <Member Name="Shipped" Value="1" />
+                <Member Name="PartiallyShipped" Value="2" />
+                <Member Name="PendingShipment" Value="4" />
+                <Member Name="Canceled" Value="8" />
+                <Member Name="ThirdPartyManaged" Value="16" />
+            </EnumType>
+            <EnumType Name="TaxType" UnderlyingType="Edm.Byte">
+                <Member Name="NoTax" Value="0" />
+                <Member Name="Standard" Value="1" />
+                <Member Name="ExclusiveVat" Value="2" />
+                <Member Name="InclusiveVat" Value="3" />
+            </EnumType>
+            <EnumType Name="FulfillmentItemSiteCommunicationStatus">
+                <Member Name="Pending" Value="0" />
+                <Member Name="InProgress" Value="10" />
+                <Member Name="Complete" Value="30" />
+                <Member Name="CompletedWithoutNotification" Value="40" />
+                <Member Name="Failed" Value="-1" />
+            </EnumType>
+            <EnumType Name="FulfillmentType" UnderlyingType="Edm.Byte">
+                <Member Name="Ship" Value="1" />
+                <Member Name="Pickup" Value="2" />
+                <Member Name="ShipToStore" Value="3" />
+                <Member Name="Courier" Value="4" />
+            </EnumType>
+            <EnumType Name="DeliveryStatus" UnderlyingType="Edm.Int16">
+                <Member Name="NoChange" Value="1" />
+                <Member Name="InTransit" Value="2" />
+                <Member Name="ReadyForPickup" Value="4" />
+                <Member Name="Complete" Value="8" />
+                <Member Name="Canceled" Value="13" />
+                <Member Name="ThirdPartyManaged" Value="26" />
+                <Member Name="Confirmed" Value="30" />
+                <Member Name="PickAndPack" Value="31" />
+                <Member Name="LabelCreated" Value="32" />
+                <Member Name="Held" Value="40" />
+            </EnumType>
+            <EnumType Name="FulfillmentRequestStatus">
+                <Member Name="New" Value="0" />
+                <Member Name="Pending" Value="10" />
+                <Member Name="Sent" Value="15" />
+                <Member Name="Processing" Value="20" />
+                <Member Name="Complete" Value="30" />
+                <Member Name="Held" Value="-10" />
+                <Member Name="Failed" Value="-1" />
+            </EnumType>
+            <EnumType Name="AdjustmentType" UnderlyingType="Edm.Byte">
+                <Member Name="Refund" Value="0" />
+                <Member Name="Cancellation" Value="1" />
+            </EnumType>
+            <EnumType Name="AsyncStatus" UnderlyingType="Edm.Int16">
+                <Member Name="SubmittedNotProcessed" Value="0" />
+                <Member Name="NewRma" Value="1" />
+                <Member Name="PendingApproval" Value="2" />
+                <Member Name="ProcessingApproval" Value="3" />
+                <Member Name="ReadyForReturn" Value="4" />
+                <Member Name="PendingReturn" Value="5" />
+                <Member Name="ProcessingReturn" Value="6" />
+                <Member Name="PendingRejection" Value="7" />
+                <Member Name="ProcessingRejection" Value="8" />
+                <Member Name="ProcessedNotAcknowledged" Value="10" />
+                <Member Name="PendingReturnRejection" Value="11" />
+                <Member Name="ProcessingReturnRejection" Value="12" />
+                <Member Name="AcknowledgedPostProcessingNotComplete" Value="20" />
+                <Member Name="PostProcessingComplete" Value="30" />
+                <Member Name="RejectionCompleted" Value="31" />
+                <Member Name="InformationOnly" Value="32" />
+                <Member Name="NoChange" Value="-999" />
+                <Member Name="Error" Value="-1" />
+            </EnumType>
+            <EnumType Name="AdjustmentSource" UnderlyingType="Edm.Byte">
+                <Member Name="Channel" Value="0" />
+                <Member Name="UserInterface" Value="1" />
+                <Member Name="Api" Value="2" />
+                <Member Name="System" Value="3" />
+            </EnumType>
+            <EnumType Name="ChannelDocumentType">
+                <Member Name="AmazonVATInvoice" Value="0" />
+                <Member Name="AmazonVATCreditNote" Value="1" />
+            </EnumType>
+            <EnumType Name="AmazonVATInvoiceRequestStatus">
+                <Member Name="New" Value="0" />
+                <Member Name="DocumentGenerated" Value="1" />
+                <Member Name="SentToAmazon" Value="2" />
+                <Member Name="Complete" Value="3" />
+                <Member Name="Failed" Value="4" />
+                <Member Name="SellerUploaded" Value="5" />
+                <Member Name="FailedNeedsRetry" Value="6" />
+                <Member Name="SkippedBeforeStartDate" Value="7" />
+            </EnumType>
+            <EnumType Name="DistributionCenterType" UnderlyingType="Edm.Byte">
+                <Member Name="Warehouse" Value="0" />
+                <Member Name="ExternallyManaged" Value="1" />
+                <Member Name="DropShip" Value="2" />
+                <Member Name="RetailStore" Value="3" />
+            </EnumType>
+            <EnumType Name="ThroughputLimitUnits" UnderlyingType="Edm.Byte">
+                <Member Name="Minutes" Value="1" />
+                <Member Name="Hours" Value="2" />
+                <Member Name="Days" Value="3" />
+            </EnumType>
+            <EnumType Name="DayIdentifier" UnderlyingType="Edm.Byte">
+                <Member Name="Sunday" Value="0" />
+                <Member Name="Monday" Value="1" />
+                <Member Name="Tuesday" Value="2" />
+                <Member Name="Wednesday" Value="3" />
+                <Member Name="Thursday" Value="4" />
+                <Member Name="Friday" Value="5" />
+                <Member Name="Saturday" Value="6" />
+            </EnumType>
+            <EnumType Name="FlagType">
+                <Member Name="NoFlag" Value="0" />
+                <Member Name="RedFlag" Value="1" />
+                <Member Name="QuestionMark" Value="2" />
+                <Member Name="NotAvailable" Value="3" />
+                <Member Name="Price" Value="4" />
+                <Member Name="YellowFlag" Value="5" />
+                <Member Name="GreenFlag" Value="6" />
+                <Member Name="BlueFlag" Value="7" />
+                <Member Name="NotSpecified" Value="-9999" />
+                <Member Name="ItemCopied" Value="-2" />
+                <Member Name="ExclamationPoint" Value="-1" />
+            </EnumType>
+            <EnumType Name="BundleType" UnderlyingType="Edm.Byte">
+                <Member Name="None" Value="0" />
+                <Member Name="BundleComponent" Value="1" />
+                <Member Name="BundleItem" Value="2" />
+                <Member Name="AssemblyBundleItem" Value="3" />
+            </EnumType>
+            <EnumType Name="InventoryItemType">
+                <Member Name="Item" Value="0" />
+                <Member Name="Child" Value="1" />
+                <Member Name="Bundle" Value="2" />
+                <Member Name="Parent" Value="3" />
+            </EnumType>
+            <EnumType Name="AliasType" UnderlyingType="Edm.Byte">
+                <Member Name="None" Value="0" />
+                <Member Name="Reference" Value="1" />
+                <Member Name="Alias" Value="2" />
+            </EnumType>
+            <EnumType Name="WebhookEndpointStatus" UnderlyingType="Edm.Byte">
+                <Member Name="Deleted" Value="0" />
+                <Member Name="Enabled" Value="1" />
+                <Member Name="Disabled" Value="2" />
+                <Member Name="Suspended" Value="3" />
+            </EnumType>
+            <EnumType Name="WebhookEventType" UnderlyingType="Edm.Byte">
+                <Member Name="Unknown" Value="0" />
+                <Member Name="PaymentCleared" Value="1" />
+                <Member Name="SellerFulfillmentStatusChanged" Value="2" />
+                <Member Name="ExternalFulfillmentStatusChanged" Value="3" />
+                <Member Name="CancellationStarted" Value="4" />
+                <Member Name="CancellationFinalized" Value="5" />
+                <Member Name="RefundStarted" Value="6" />
+                <Member Name="RefundFinalized" Value="7" />
+                <Member Name="SellerManagedOrderPaymentCleared" Value="8" />
+            </EnumType>
+            <EnumType Name="DocumentType">
+                <Member Name="Unknown" Value="0" />
+                <Member Name="VATInvoice" Value="1" />
+                <Member Name="VATCreditNote" Value="2" />
+                <Member Name="ReturnShippingLabel" Value="3" />
+            </EnumType>
+            <EnumType Name="DocumentSourceType">
+                <Member Name="Unknown" Value="0" />
+                <Member Name="Site" Value="1" />
+                <Member Name="Seller" Value="2" />
+            </EnumType>
+            <EnumType Name="QuantityUpdateType" UnderlyingType="Edm.Byte">
+                <Member Name="Absolute" Value="0" />
+                <Member Name="Relative" Value="1" />
+                <Member Name="Available" Value="2" />
+                <Member Name="InStock" Value="3" />
+                <Member Name="UnShipped" Value="4" />
+                <Member Name="Unconfirmed" Value="5" />
+            </EnumType>
+            <Function Name="OrderDocuments" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Order" />
+                <ReturnType Type="Collection(ChannelAdvisor.RestApi.V1.Models.OrderDocumentFlyweight)" />
+            </Function>
+            <Function Name="Missing" IsBound="true">
+                <Parameter Name="bindingParameter" Type="Collection(ChannelAdvisor.RestApi.V1.Models.OrderDocument)" />
+                <ReturnType Type="Collection(ChannelAdvisor.RestApi.V1.Models.Order)" />
+            </Function>
+            <Action Name="Retrieved" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.OrderDocument" />
+            </Action>
+            <Action Name="NewSigningSecret" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.PostSale.RestApi.V1.Models.Webhook" />
+            </Action>
+            <Action Name="RetryFailedEvents" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.PostSale.RestApi.V1.Models.Webhook" />
+                <Parameter Name="Token" Type="Edm.String" />
+            </Action>
+            <Action Name="Create" IsBound="true">
+                <Parameter Name="bindingParameter" Type="Collection(ChannelAdvisor.RestApi.V1.Models.Order)" />
+                <Parameter Name="Order" Type="ChannelAdvisor.RestApi.V1.Models.Order" />
+                <Parameter Name="ShippingOverrides" Type="Collection(ChannelAdvisor.RestApi.V1.Models.ShippingOverride)" />
+                <ReturnType Type="ChannelAdvisor.RestApi.V1.Models.Order" />
+            </Action>
+            <Action Name="Ship" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Order" />
+                <Parameter Name="Value" Type="ChannelAdvisor.RestApi.V1.Models.ShipOrderRequest" />
+            </Action>
+            <Action Name="ShippingRates" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Order" />
+                <Parameter Name="ShippingLabelPartnerAccountIDs" Type="Collection(Edm.Int32)" />
+                <Parameter Name="Items" Type="Collection(ChannelAdvisor.RestApi.V1.Models.ShippingItems)" />
+                <Parameter Name="PackageID" Type="Edm.Int32" />
+                <Parameter Name="ApplyDeliverByDate" Type="Edm.Boolean" />
+                <Parameter Name="DeliverByDateUtc" Type="Edm.DateTimeOffset" />
+                <Parameter Name="DeliveryConfirmation" Type="ChannelAdvisor.RestApi.V1.Models.DeliveryConfirmationType" />
+                <Parameter Name="DistributionCenterID" Type="Edm.Int32" />
+                <Parameter Name="InsuredAmount" Type="Edm.Decimal" />
+                <Parameter Name="LabelFormat" Type="ChannelAdvisor.PostSale.RestApi.V1.Models.LabelFormatType" />
+                <Parameter Name="ShipDateUtc" Type="Edm.DateTimeOffset" />
+                <Parameter Name="MeasurementUnit" Type="ChannelAdvisor.RestApi.V1.Models.MeasurementUnit" />
+                <Parameter Name="Height" Type="Edm.Decimal" />
+                <Parameter Name="Length" Type="Edm.Decimal" />
+                <Parameter Name="Width" Type="Edm.Decimal" />
+                <Parameter Name="WeightUnit" Type="ChannelAdvisor.RestApi.V1.Models.WeightUnit" />
+                <Parameter Name="Weight" Type="Edm.Decimal" />
+                <Parameter Name="PurchaseCheapestRate" Type="Edm.Boolean" />
+                <Parameter Name="ShippingLabelRequestID" Type="Edm.String" />
+                <Parameter Name="SourceCompanyName" Type="Edm.String" />
+                <Parameter Name="SourceTitle" Type="Edm.String" />
+                <Parameter Name="SourceFirstName" Type="Edm.String" />
+                <Parameter Name="SourceLastName" Type="Edm.String" />
+                <Parameter Name="SourceAddressLine1" Type="Edm.String" />
+                <Parameter Name="SourceAddressLine2" Type="Edm.String" />
+                <Parameter Name="SourceCity" Type="Edm.String" />
+                <Parameter Name="SourceStateOrProvince" Type="Edm.String" />
+                <Parameter Name="SourcePostalCode" Type="Edm.String" />
+                <Parameter Name="SourceCountryCode" Type="Edm.String" />
+                <Parameter Name="SourceEmailAddress" Type="Edm.String" />
+                <Parameter Name="SourcePhoneNumber" Type="Edm.String" />
+                <Parameter Name="DestinationCompanyName" Type="Edm.String" />
+                <Parameter Name="DestinationTitle" Type="Edm.String" />
+                <Parameter Name="DestinationFirstName" Type="Edm.String" />
+                <Parameter Name="DestinationLastName" Type="Edm.String" />
+                <Parameter Name="DestinationAddressLine1" Type="Edm.String" />
+                <Parameter Name="DestinationAddressLine2" Type="Edm.String" />
+                <Parameter Name="DestinationCity" Type="Edm.String" />
+                <Parameter Name="DestinationStateOrProvince" Type="Edm.String" />
+                <Parameter Name="DestinationPostalCode" Type="Edm.String" />
+                <Parameter Name="DestinationCountryCode" Type="Edm.String" />
+                <Parameter Name="DestinationEmailAddress" Type="Edm.String" />
+                <Parameter Name="DestinationPhoneNumber" Type="Edm.String" />
+                <Parameter Name="IsCommercialAddress" Type="Edm.Boolean" />
+                <Parameter Name="IncludeCustoms" Type="Edm.Boolean" />
+                <Parameter Name="ExportReason" Type="ChannelAdvisor.RestApi.V1.Models.ExportReason" />
+                <Parameter Name="CertificateNumber" Type="Edm.String" />
+                <Parameter Name="CustomsComments" Type="Edm.String" />
+                <Parameter Name="EelPfc" Type="Edm.String" />
+                <Parameter Name="FromCustomsReference" Type="Edm.String" />
+                <Parameter Name="ImporterCustomsReference" Type="Edm.String" />
+                <Parameter Name="InsuredNumber" Type="Edm.String" />
+                <Parameter Name="LicenseNumber" Type="Edm.String" />
+                <Parameter Name="ManufacturedCountryCode" Type="Edm.String" />
+            </Action>
+            <Action Name="PurchaseLabel" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Order" />
+                <Parameter Name="RateID" Type="Edm.Guid" Nullable="false" />
+                <Parameter Name="LabelFormat" Type="ChannelAdvisor.PostSale.RestApi.V1.Models.LabelFormatType" />
+                <Parameter Name="ShippingLabelRequestID" Type="Edm.String" />
+            </Action>
+            <Action Name="PickupLabel" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Order" />
+                <Parameter Name="MeasurementUnit" Type="ChannelAdvisor.RestApi.V1.Models.MeasurementUnit" />
+                <Parameter Name="Length" Type="Edm.Decimal" />
+                <Parameter Name="Width" Type="Edm.Decimal" />
+                <Parameter Name="Height" Type="Edm.Decimal" />
+                <Parameter Name="WeightUnit" Type="ChannelAdvisor.RestApi.V1.Models.WeightUnit" />
+                <Parameter Name="Weight" Type="Edm.Decimal" />
+                <Parameter Name="HazmatLabels" Type="Collection(Edm.String)" />
+                <Parameter Name="LineItems" Type="Collection(ChannelAdvisor.RestApi.V1.Models.PickupLabelLineItem)" />
+            </Action>
+            <Action Name="Adjust" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Order" />
+                <Parameter Name="AdjustmentAmount" Type="Edm.Decimal" />
+                <Parameter Name="Reason" Type="ChannelAdvisor.RestApi.V1.Models.AdjustmentReason" />
+                <Parameter Name="PreventSiteProcessing" Type="Edm.Boolean" />
+                <Parameter Name="SellerAdjustmentID" Type="Edm.String" />
+                <Parameter Name="Restock" Type="Edm.Boolean" />
+                <Parameter Name="RefundOnly" Type="Edm.Boolean" />
+            </Action>
+            <Action Name="Export" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Order" />
+            </Action>
+            <Action Name="Adjust" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.OrderItem" />
+                <Parameter Name="Quantity" Type="Edm.Int32" />
+                <Parameter Name="Reason" Type="ChannelAdvisor.RestApi.V1.Models.AdjustmentReason" />
+                <Parameter Name="Restock" Type="Edm.Boolean" />
+                <Parameter Name="ItemAdjustment" Type="Edm.Decimal" />
+                <Parameter Name="TaxAdjustment" Type="Edm.Decimal" />
+                <Parameter Name="ShippingAdjustment" Type="Edm.Decimal" />
+                <Parameter Name="ShippingTaxAdjustment" Type="Edm.Decimal" />
+                <Parameter Name="GiftWrapAdjustment" Type="Edm.Decimal" />
+                <Parameter Name="GiftWrapTaxAdjustment" Type="Edm.Decimal" />
+                <Parameter Name="RecyclingFeeAdjustment" Type="Edm.Decimal" />
+                <Parameter Name="PreventSiteProcessing" Type="Edm.Boolean" />
+                <Parameter Name="SellerAdjustmentID" Type="Edm.String" />
+                <Parameter Name="ForceCalculateOmittedAmounts" Type="Edm.Boolean" />
+                <Parameter Name="RefundOnly" Type="Edm.Boolean" />
+            </Action>
+            <Action Name="Move" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Fulfillment" />
+                <Parameter Name="DestinationFulfillmentID" Type="Edm.Int32" Nullable="false" />
+            </Action>
+            <Action Name="Move" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.FulfillmentItem" />
+                <Parameter Name="DestinationFulfillmentID" Type="Edm.Int32" Nullable="false" />
+                <Parameter Name="Quantity" Type="Edm.Int32" />
+            </Action>
+            <Action Name="ApproveBuyerRequest" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.OrderAdjustment" />
+            </Action>
+            <Action Name="RejectBuyerRequest" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.OrderAdjustment" />
+            </Action>
+            <Action Name="ApproveReturn" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.OrderAdjustment" />
+            </Action>
+            <Action Name="RejectReturn" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.OrderAdjustment" />
+            </Action>
+            <Action Name="ReturnShippingLabel" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.OrderAdjustment" />
+            </Action>
+            <Action Name="ApproveBuyerRequest" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.OrderItemAdjustment" />
+            </Action>
+            <Action Name="RejectBuyerRequest" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.OrderItemAdjustment" />
+            </Action>
+            <Action Name="ApproveReturn" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.OrderItemAdjustment" />
+                <Parameter Name="ConditionQuantityList" Type="Collection(ChannelAdvisor.RestApi.V1.Models.RmaConditionQuantity)" />
+            </Action>
+            <Action Name="RejectReturn" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.OrderItemAdjustment" />
+                <Parameter Name="ConditionQuantityList" Type="Collection(ChannelAdvisor.RestApi.V1.Models.RmaConditionQuantity)" />
+            </Action>
+            <Action Name="ReturnShippingLabel" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.OrderItemAdjustment" />
+            </Action>
+            <Action Name="UpdateQuantity" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Product" />
+                <Parameter Name="Value" Type="ChannelAdvisor.RestApi.V1.Models.QuantityUpdateRequest" />
+            </Action>
+            <Action Name="RemoveChildren" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Product" />
+                <Parameter Name="Value" Type="ChannelAdvisor.RestApi.V1.Models.ChildrenRemoveRequest" />
+            </Action>
+            <Action Name="UpdateAttributes" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Product" />
+                <Parameter Name="Value" Type="ChannelAdvisor.RestApi.V1.Models.AttributesUpdateRequest" />
+            </Action>
+            <Function Name="NotSupplied" IsBound="true">
+                <Parameter Name="bindingParameter" Type="Collection(ChannelAdvisor.RestApi.V1.Models.ChannelDocument)" />
+                <ReturnType Type="Collection(ChannelAdvisor.RestApi.V1.Models.NotSuppliedChannelDocument)" />
+            </Function>
+            <Action Name="Retrieved" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.ChannelDocument" />
+            </Action>
+            <Action Name="Confirm" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Order" />
+            </Action>
+            <Action Name="Deny" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Order" />
+            </Action>
+            <Action Name="Confirm" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Fulfillment" />
+            </Action>
+            <Action Name="Deny" IsBound="true">
+                <Parameter Name="bindingParameter" Type="ChannelAdvisor.RestApi.V1.Models.Fulfillment" />
+            </Action>
+            <EntityContainer Name="Container">
+                <EntitySet Name="Orders" EntityType="ChannelAdvisor.RestApi.V1.Models.Order">
+                    <NavigationPropertyBinding Path="Adjustments" Target="OrderAdjustments" />
+                    <NavigationPropertyBinding Path="ChannelDocuments" Target="ChannelDocuments" />
+                    <NavigationPropertyBinding Path="CustomFields" Target="CustomFields" />
+                    <NavigationPropertyBinding Path="Fulfillments" Target="Fulfillments" />
+                    <NavigationPropertyBinding Path="Items" Target="OrderItems" />
+                    <NavigationPropertyBinding Path="OrderAttributes" Target="OrderAttributeValues" />
+                    <Annotation Term="Org.OData.Capabilities.V1.ExpandRestrictions">
+                        <Record>
+                            <PropertyValue Property="Expandable" Bool="true" />
+                            <PropertyValue Property="NonExpandableProperties">
+                                <Collection>
+                                    <NavigationPropertyPath>Exports</NavigationPropertyPath>
+                                    <NavigationPropertyPath>ChannelDocuments</NavigationPropertyPath>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Annotation>
+                </EntitySet>
+                <EntitySet Name="OrderItems" EntityType="ChannelAdvisor.RestApi.V1.Models.OrderItem">
+                    <NavigationPropertyBinding Path="Adjustments" Target="OrderItemAdjustments" />
+                    <NavigationPropertyBinding Path="BundleComponents" Target="OrderItemBundleComponents" />
+                    <NavigationPropertyBinding Path="FulfillmentItems" Target="FulfillmentItems" />
+                    <NavigationPropertyBinding Path="Order" Target="Orders" />
+                    <NavigationPropertyBinding Path="OrderItemAttributes" Target="OrderItemAttributeValues" />
+                    <NavigationPropertyBinding Path="Promotions" Target="OrderItemPromotions" />
+                </EntitySet>
+                <EntitySet Name="Fulfillments" EntityType="ChannelAdvisor.RestApi.V1.Models.Fulfillment">
+                    <NavigationPropertyBinding Path="Items" Target="FulfillmentItems" />
+                    <NavigationPropertyBinding Path="Order" Target="Orders" />
+                </EntitySet>
+                <EntitySet Name="FulfillmentItems" EntityType="ChannelAdvisor.RestApi.V1.Models.FulfillmentItem">
+                    <NavigationPropertyBinding Path="BundleComponent" Target="OrderItemBundleComponents" />
+                    <NavigationPropertyBinding Path="Fulfillment" Target="Fulfillments" />
+                    <NavigationPropertyBinding Path="OrderItem" Target="OrderItems" />
+                    <Annotation Term="Org.OData.Capabilities.V1.SortRestrictions">
+                        <Record>
+                            <PropertyValue Property="Sortable" Bool="true" />
+                            <PropertyValue Property="AscendingOnlyProperties">
+                                <Collection />
+                            </PropertyValue>
+                            <PropertyValue Property="DescendingOnlyProperties">
+                                <Collection />
+                            </PropertyValue>
+                            <PropertyValue Property="NonSortableProperties">
+                                <Collection>
+                                    <PropertyPath>DistributionCenterItemUnitCost</PropertyPath>
+                                    <PropertyPath>DistributionCenterShippingCost</PropertyPath>
+                                    <PropertyPath>DistributionCenterCalculatedItemUnitCost</PropertyPath>
+                                    <PropertyPath>DistributionCenterCalculatedShippingCost</PropertyPath>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Annotation>
+                </EntitySet>
+                <EntitySet Name="DistributionCenters" EntityType="ChannelAdvisor.RestApi.V1.Models.DistributionCenter">
+                    <NavigationPropertyBinding Path="OperatingHours" Target="OperatingHours" />
+                </EntitySet>
+                <EntitySet Name="OperatingHours" EntityType="ChannelAdvisor.RestApi.V1.Models.OperatingHours" />
+                <EntitySet Name="OrderAdjustments" EntityType="ChannelAdvisor.RestApi.V1.Models.OrderAdjustment">
+                    <NavigationPropertyBinding Path="Order" Target="Orders" />
+                    <Annotation Term="Org.OData.Capabilities.V1.SortRestrictions">
+                        <Record>
+                            <PropertyValue Property="Sortable" Bool="true" />
+                            <PropertyValue Property="AscendingOnlyProperties">
+                                <Collection />
+                            </PropertyValue>
+                            <PropertyValue Property="DescendingOnlyProperties">
+                                <Collection />
+                            </PropertyValue>
+                            <PropertyValue Property="NonSortableProperties">
+                                <Collection>
+                                    <PropertyPath>CreatedSource</PropertyPath>
+                                    <PropertyPath>LastUpdatedSource</PropertyPath>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Annotation>
+                </EntitySet>
+                <EntitySet Name="OrderItemAdjustments" EntityType="ChannelAdvisor.RestApi.V1.Models.OrderItemAdjustment">
+                    <NavigationPropertyBinding Path="OrderItem" Target="OrderItems" />
+                    <Annotation Term="Org.OData.Capabilities.V1.SortRestrictions">
+                        <Record>
+                            <PropertyValue Property="Sortable" Bool="true" />
+                            <PropertyValue Property="AscendingOnlyProperties">
+                                <Collection />
+                            </PropertyValue>
+                            <PropertyValue Property="DescendingOnlyProperties">
+                                <Collection />
+                            </PropertyValue>
+                            <PropertyValue Property="NonSortableProperties">
+                                <Collection>
+                                    <PropertyPath>CreatedSource</PropertyPath>
+                                    <PropertyPath>LastUpdatedSource</PropertyPath>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Annotation>
+                </EntitySet>
+                <EntitySet Name="OrderItemBundleComponents" EntityType="ChannelAdvisor.RestApi.V1.Models.OrderItemBundleComponent">
+                    <NavigationPropertyBinding Path="FulfillmentItems" Target="FulfillmentItems" />
+                    <NavigationPropertyBinding Path="OrderItem" Target="OrderItems" />
+                </EntitySet>
+                <EntitySet Name="OrderItemPromotions" EntityType="ChannelAdvisor.RestApi.V1.Models.Promotion">
+                    <NavigationPropertyBinding Path="OrderItem" Target="OrderItems" />
+                </EntitySet>
+                <EntitySet Name="CustomFields" EntityType="ChannelAdvisor.RestApi.V1.Models.CustomField">
+                    <NavigationPropertyBinding Path="Order" Target="Orders" />
+                </EntitySet>
+                <EntitySet Name="Profiles" EntityType="ChannelAdvisor.RestApi.V1.Models.Profile" />
+                <EntitySet Name="Products" EntityType="ChannelAdvisor.RestApi.V1.Models.Product">
+                    <NavigationPropertyBinding Path="AliasRelationships" Target="AliasRelationships" />
+                    <NavigationPropertyBinding Path="Attributes" Target="AttributeValues" />
+                    <NavigationPropertyBinding Path="BundleComponents" Target="ProductBundleComponents" />
+                    <NavigationPropertyBinding Path="Children" Target="Children" />
+                    <NavigationPropertyBinding Path="DCQuantities" Target="DCQuantities" />
+                    <NavigationPropertyBinding Path="Images" Target="Images" />
+                    <NavigationPropertyBinding Path="Labels" Target="ProductLabels" />
+                </EntitySet>
+                <EntitySet Name="AliasRelationships" EntityType="ChannelAdvisor.RestApi.V1.Models.AliasRelationship">
+                    <NavigationPropertyBinding Path="Product" Target="Products" />
+                </EntitySet>
+                <EntitySet Name="Images" EntityType="ChannelAdvisor.RestApi.V1.Models.Image">
+                    <NavigationPropertyBinding Path="Product" Target="Products" />
+                </EntitySet>
+                <EntitySet Name="AttributeValues" EntityType="ChannelAdvisor.RestApi.V1.Models.AttributeValue">
+                    <NavigationPropertyBinding Path="Product" Target="Products" />
+                </EntitySet>
+                <EntitySet Name="DCQuantities" EntityType="ChannelAdvisor.RestApi.V1.Models.DCQuantity">
+                    <NavigationPropertyBinding Path="Product" Target="Products" />
+                </EntitySet>
+                <EntitySet Name="ProductLabels" EntityType="ChannelAdvisor.RestApi.V1.Models.ProductLabel">
+                    <NavigationPropertyBinding Path="Product" Target="Products" />
+                </EntitySet>
+                <EntitySet Name="ProductBundleComponents" EntityType="ChannelAdvisor.RestApi.V1.Models.ProductBundleComponent">
+                    <NavigationPropertyBinding Path="Product" Target="Products" />
+                </EntitySet>
+                <EntitySet Name="Children" EntityType="ChannelAdvisor.RestApi.V1.Models.ChildRelationship">
+                    <NavigationPropertyBinding Path="ChildProduct" Target="Products" />
+                </EntitySet>
+                <EntitySet Name="Packages" EntityType="ChannelAdvisor.RestApi.V1.Models.Package" />
+                <EntitySet Name="ChannelDocuments" EntityType="ChannelAdvisor.RestApi.V1.Models.ChannelDocument" />
+                <EntitySet Name="NotSuppliedChannelDocument" EntityType="ChannelAdvisor.RestApi.V1.Models.NotSuppliedChannelDocument" />
+                <EntitySet Name="Webhooks" EntityType="ChannelAdvisor.PostSale.RestApi.V1.Models.Webhook" />
+                <EntitySet Name="Sites" EntityType="ChannelAdvisor.RestApi.V1.Models.Site" />
+                <EntitySet Name="OrderDocuments" EntityType="ChannelAdvisor.RestApi.V1.Models.OrderDocument">
+                    <NavigationPropertyBinding Path="Metadata" Target="OrderDocumentMetadata" />
+                </EntitySet>
+                <EntitySet Name="OrderDocumentFlyweights" EntityType="ChannelAdvisor.RestApi.V1.Models.OrderDocumentFlyweight">
+                    <NavigationPropertyBinding Path="ChannelAdvisor.RestApi.V1.Models.OrderDocument/Metadata" Target="OrderDocumentMetadata" />
+                </EntitySet>
+                <EntitySet Name="OrderDocumentMetadata" EntityType="ChannelAdvisor.RestApi.V1.Models.OrderDocumentMetadata" />
+                <EntitySet Name="OrderAttributeValues" EntityType="ChannelAdvisor.RestApi.V1.Models.OrderAttributeValue">
+                    <NavigationPropertyBinding Path="Order" Target="Orders" />
+                    <Annotation Term="Org.OData.Capabilities.V1.FilterRestrictions">
+                        <Record>
+                            <PropertyValue Property="Filterable" Bool="true" />
+                            <PropertyValue Property="RequiresFilter" Bool="true" />
+                            <PropertyValue Property="RequiredProperties">
+                                <Collection />
+                            </PropertyValue>
+                            <PropertyValue Property="NonFilterableProperties">
+                                <Collection>
+                                    <PropertyPath>Value</PropertyPath>
+                                    <PropertyPath>Name</PropertyPath>
+                                    <PropertyPath>ProfileID</PropertyPath>
+                                    <PropertyPath>OrderID</PropertyPath>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Annotation>
+                    <Annotation Term="Org.OData.Capabilities.V1.SortRestrictions">
+                        <Record>
+                            <PropertyValue Property="Sortable" Bool="true" />
+                            <PropertyValue Property="AscendingOnlyProperties">
+                                <Collection />
+                            </PropertyValue>
+                            <PropertyValue Property="DescendingOnlyProperties">
+                                <Collection />
+                            </PropertyValue>
+                            <PropertyValue Property="NonSortableProperties">
+                                <Collection>
+                                    <PropertyPath>Value</PropertyPath>
+                                    <PropertyPath>Name</PropertyPath>
+                                    <PropertyPath>ProfileID</PropertyPath>
+                                    <PropertyPath>OrderID</PropertyPath>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Annotation>
+                </EntitySet>
+                <EntitySet Name="OrderItemAttributeValues" EntityType="ChannelAdvisor.RestApi.V1.Models.OrderItemAttributeValue">
+                    <NavigationPropertyBinding Path="OrderItem" Target="OrderItems" />
+                    <Annotation Term="Org.OData.Capabilities.V1.FilterRestrictions">
+                        <Record>
+                            <PropertyValue Property="Filterable" Bool="true" />
+                            <PropertyValue Property="RequiresFilter" Bool="true" />
+                            <PropertyValue Property="RequiredProperties">
+                                <Collection />
+                            </PropertyValue>
+                            <PropertyValue Property="NonFilterableProperties">
+                                <Collection>
+                                    <PropertyPath>Value</PropertyPath>
+                                    <PropertyPath>Name</PropertyPath>
+                                    <PropertyPath>OrderID</PropertyPath>
+                                    <PropertyPath>OrderItemID</PropertyPath>
+                                    <PropertyPath>ProfileID</PropertyPath>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Annotation>
+                    <Annotation Term="Org.OData.Capabilities.V1.SortRestrictions">
+                        <Record>
+                            <PropertyValue Property="Sortable" Bool="true" />
+                            <PropertyValue Property="AscendingOnlyProperties">
+                                <Collection />
+                            </PropertyValue>
+                            <PropertyValue Property="DescendingOnlyProperties">
+                                <Collection />
+                            </PropertyValue>
+                            <PropertyValue Property="NonSortableProperties">
+                                <Collection>
+                                    <PropertyPath>Value</PropertyPath>
+                                    <PropertyPath>Name</PropertyPath>
+                                    <PropertyPath>OrderID</PropertyPath>
+                                    <PropertyPath>OrderItemID</PropertyPath>
+                                    <PropertyPath>ProfileID</PropertyPath>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Annotation>
+                </EntitySet>
+            </EntityContainer>
+        </Schema>
+        <Schema Namespace="ChannelAdvisor.PostSale.RestApi.V1.Models"
+            xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityType Name="Webhook">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Name" Type="Edm.String" />
+                <Property Name="Status" Type="ChannelAdvisor.RestApi.V1.Models.WebhookEndpointStatus" Nullable="false" />
+                <Property Name="WebhookUri" Type="Edm.String" />
+                <Property Name="SigningSecret" Type="Edm.String" />
+                <Property Name="EventTypes" Type="Collection(ChannelAdvisor.RestApi.V1.Models.WebhookEventType)" Nullable="false" />
+            </EntityType>
+            <EnumType Name="LabelFormatType" UnderlyingType="Edm.Int16">
+                <Member Name="JPEG" Value="1" />
+                <Member Name="PDF" Value="2" />
+                <Member Name="PNG" Value="3" />
+                <Member Name="GzipPDF" Value="4" />
+                <Member Name="GIFLandscape" Value="5" />
+                <Member Name="GzipPNG" Value="6" />
+                <Member Name="GIFPortrait" Value="7" />
+                <Member Name="ZPL" Value="8" />
+                <Member Name="GzipZPL" Value="9" />
+            </EnumType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
